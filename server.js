@@ -1,6 +1,6 @@
 import http from 'http';
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 
 // Simple in-memory data array (mimicking your controller file)
 let posts = [
@@ -24,6 +24,7 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.end(JSON.stringify(posts));
   } else if (req.method === 'POST' && req.url === '/api/posts') { 
+    let body = '';
     // Data chunks collection continues below...
 
 
